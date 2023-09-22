@@ -1,9 +1,10 @@
-package br.com.ifpe.oxefoodapinicoly.modelo.cliente;
+package br.com.ifpe.oxefoodapinicoly.modelo;
 
-import java.time.LocalDate;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 //import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
@@ -21,7 +22,7 @@ import lombok.Setter;
 
 
 @Entity
-@Table(name = "Cliente")
+@Table(name = "Produto")
 @Where(clause = "habilitado = true")
 @Builder
 @Getter
@@ -31,24 +32,27 @@ import lombok.Setter;
 
 
 
-public class Cliente extends EntidadeAuditavel  {
+public class Produto extends EntidadeAuditavel  {
 
    
- 
+   @Id
    @Column
-   private String nome;
+   private String titulo;
 
+   @Column
+   private String  descricao;
    
-    @Column
-   private LocalDate dataNascimento;
+   @Column
+   private String    codigoproduto;
+
 
     @Column
-   private String cpf;
+   private String MinutosMaximos;
+  @Column
+   private String MinutosMinimos;
 
-    @Column
-   private String foneCelular;
-
-    @Column
-   private String foneFixo;
+      @Column
+   private String valorUnitario;
 
 }
+

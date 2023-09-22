@@ -1,6 +1,7 @@
 package br.com.ifpe.oxefoodapinicoly.modelo.cliente;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.transaction.Transactional;
 
@@ -8,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-
 public class ClienteService {
 
    @Autowired
@@ -22,6 +22,15 @@ public class ClienteService {
        cliente.setDataCriacao(LocalDate.now());
        return repository.save(cliente);
    }
+   public List<Cliente> findAll() {
+  
+        return repository.findAll();
+    }
+
+    public Cliente findById(Long id) {
+
+        return repository.findById(id).get();
+    }
 
     
 }

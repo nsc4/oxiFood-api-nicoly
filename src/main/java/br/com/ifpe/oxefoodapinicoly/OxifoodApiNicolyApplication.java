@@ -1,4 +1,4 @@
-package br.com.ifpe.oxifoodapinicoly;
+package br.com.ifpe.oxefoodapinicoly;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

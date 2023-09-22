@@ -10,21 +10,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-
-
-
-
 public class ClienteRequest {
-    
+
    private String nome;
 
-   
    @JsonFormat(pattern = "dd/MM/yyyy")
    private LocalDate dataNascimento;
 
@@ -43,7 +36,5 @@ public class ClienteRequest {
                .foneCelular(foneCelular)
                .foneFixo(foneFixo)
                .build();
-
-    
-}
+   }
 }
